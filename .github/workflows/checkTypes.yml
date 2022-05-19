@@ -19,4 +19,4 @@ jobs:
 
     - name: checkDiff
       working-directory: ${{ github.workspace }}
-      run: sh generate/checkDiff.sh
+      run: ./generate/checkDiff.sh
