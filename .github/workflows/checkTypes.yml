@@ -12,10 +12,11 @@ on:
 jobs:
   build:
 
-    runs-on: mattpolzin2/idris-docker:latest
+    runs-on: ubuntu-latest
+    container: mattpolzin2/idris-docker:nightly
 
     steps:
     - uses: actions/checkout@v3
 
     - name: checkDiff
-      run: ./generator/checkDiff.sh
+      run: ./generate/checkDiff.sh
