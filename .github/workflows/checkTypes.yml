@@ -1,0 +1,21 @@
+name: Check Mime types
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: 0 0 * * Sun'  # every sunday at midnight
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: checkDiff
+      run: sh generate/checkDiff.sh
