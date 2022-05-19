@@ -18,5 +18,5 @@ jobs:
     - uses: actions/checkout@v3
 
     - name: checkDiff
-      working-directory: ${{ github.workspace }}
+      working-directory: ./
       run: ./generate/checkDiff.sh
